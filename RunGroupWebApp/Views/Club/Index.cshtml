@@ -1,7 +1,15 @@
-﻿@*
+﻿@model IEnumerable<Club> //getting list of clubs
+
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
 }
 
 <h1>Hello index</h1>
+@foreach (var item in Model){
+    <p>@item.Title</p>
+    <p>@item.Description</p>
+    <p>@item.ClubCategory</p>
+    <a asp-controller="Club" asp-action="Detail" asp-route-id="@item.Id">View</a>
+}

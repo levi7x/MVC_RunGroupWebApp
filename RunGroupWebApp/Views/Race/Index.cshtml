@@ -1,5 +1,14 @@
-﻿@*
+﻿@model IEnumerable<Race>
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+}
+
+<h1>Hi races</h1>
+@foreach (var item in Model)
+{
+    <p>@item.Title</p>
+    <p>@item.Description</p>
+    <p>@item.RaceCategory</p>
 }
