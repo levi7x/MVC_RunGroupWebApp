@@ -1,6 +1,11 @@
 ﻿namespace RunGroupWebApp.Data.Enum
 {
-    public class RaceCategory
+    public enum RaceCategory
     {
+        Marathon,
+        Ultra,
+        FiveK,
+        TenK,
+        HalfMarathon
     }
 }
