@@ -1,0 +1,22 @@
+﻿@using RunGroupWebApp.ViewModels
+@model List<UserViewModel>
+
+
+
+
+@foreach(var item in Model)
+{
+    <p>@item.UserName</p>
+    <p>@item.Mileage</p>
+    <p>@item.Pace</p>
+
+    <a type="btn btn-success asp-controller="User" asp-action="Detail" asp-route-id="@item.Id">View</a>
+
+    @if(User.Identity.IsAuthenticated && User.IsInRole("admin"))
+    {
+        <a asp-controller="Club" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+        <a asp-controller="Club" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+    }
+}
+
+
