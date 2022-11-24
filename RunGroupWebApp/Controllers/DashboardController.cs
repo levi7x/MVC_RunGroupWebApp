@@ -62,7 +62,7 @@ namespace RunGroupWebApp.Controllers
                 State = user.State
             };
 
-            return View();
+            return View(editUserVM);
         }
         [HttpPost]
         public async Task<IActionResult> EditUserProfile(EditUserDashboardViewModel editVM)
